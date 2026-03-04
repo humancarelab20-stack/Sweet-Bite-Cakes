@@ -32,3 +32,21 @@ li {
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
+.price-section {
+  margin: 25px 10px;
+  text-align: center;
+}
+
+.price-section h2 {
+  color: #8b4513;
+  margin-bottom: 15px;
+}
+
+.price-box {
+  background: #ffffff;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
