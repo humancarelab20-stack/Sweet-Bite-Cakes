@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Sweet Bite Cakes</title>
 
 <style>
 
 body{
-font-family: Arial;
-background:#fff0f5;
+font-family:Arial;
+background:#fff5f7;
 margin:0;
 text-align:center;
 }
@@ -22,61 +21,37 @@ font-weight:bold;
 }
 
 .menu{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+max-width:600px;
+margin:30px auto;
+background:white;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
 padding:20px;
 }
 
-.cake{
-background:white;
-width:220px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-overflow:hidden;
-transition:0.3s;
-}
-
-.cake:hover{
-transform:scale(1.05);
-}
-
-.cake img{
-width:100%;
-height:160px;
-object-fit:cover;
-}
-
-.cake h3{
-margin:10px 0 5px;
+.item{
+display:flex;
+justify-content:space-between;
+padding:10px;
+border-bottom:1px solid #eee;
+font-size:18px;
 }
 
 .price{
-color:green;
+color:#28a745;
 font-weight:bold;
-margin-bottom:10px;
 }
 
-.order{
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
 background:#25D366;
 color:white;
-padding:10px;
+padding:15px 20px;
+border-radius:30px;
 text-decoration:none;
-display:block;
 font-weight:bold;
-}
-
-.order:hover{
-background:#1ebc59;
-}
-
-.pastry{
-background:white;
-margin:20px;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
 </style>
@@ -91,95 +66,27 @@ box-shadow:0 0 10px rgba(0,0,0,0.2);
 
 <div class="menu">
 
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
-<h3>Vanilla Cake</h3>
-<div class="price">500gm ₹360</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Vanilla%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1605475128023-3c63a04a9fbb">
-<h3>Black Forest Cake</h3>
-<div class="price">500gm ₹360</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Black%20Forest%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729">
-<h3>Pineapple Cake</h3>
-<div class="price">500gm ₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Pineapple%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187">
-<h3>Strawberry Cake</h3>
-<div class="price">500gm ₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Strawberry%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c">
-<h3>Butterscotch Cake</h3>
-<div class="price">500gm ₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Butterscotch%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1587241321921-91a834d6d191">
-<h3>White Forest Cake</h3>
-<div class="price">500gm ₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20White%20Forest%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1599785209796-786432b228bc">
-<h3>Choco Chips Cake</h3>
-<div class="price">500gm ₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Choco%20Chips%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31">
-<h3>Blueberry Cake</h3>
-<div class="price">500gm ₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Blueberry%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7">
-<h3>Chocolate Truffle Cake</h3>
-<div class="price">500gm ₹499</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Chocolate%20Truffle%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1623428454614-abaf00244e52">
-<h3>Oreo Cake</h3>
-<div class="price">500gm ₹499</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20Oreo%20Cake">Order Now</a>
-</div>
-
-<div class="cake">
-<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307">
-<h3>KitKat Cake</h3>
-<div class="price">500gm ₹499</div>
-<a class="order" href="https://wa.me/917779009369?text=I%20want%20KitKat%20Cake">Order Now</a>
-</div>
+<div class="item"><span>Vanilla Cake (500gm)</span><span class="price">₹360</span></div>
+<div class="item"><span>Black Forest Cake (500gm)</span><span class="price">₹360</span></div>
+<div class="item"><span>Pineapple Cake (500gm)</span><span class="price">₹399</span></div>
+<div class="item"><span>Strawberry Cake (500gm)</span><span class="price">₹399</span></div>
+<div class="item"><span>Butterscotch Cake (500gm)</span><span class="price">₹399</span></div>
+<div class="item"><span>White Forest Cake (500gm)</span><span class="price">₹399</span></div>
+<div class="item"><span>Choco Chips Cake (500gm)</span><span class="price">₹450</span></div>
+<div class="item"><span>Blue Berry Cake (500gm)</span><span class="price">₹450</span></div>
+<div class="item"><span>Italian Chocolate Cake (500gm)</span><span class="price">₹450</span></div>
+<div class="item"><span>Marble Chocolate Cake (500gm)</span><span class="price">₹450</span></div>
+<div class="item"><span>Chocolate Truffle Cake (500gm)</span><span class="price">₹499</span></div>
+<div class="item"><span>Oreo Cake (500gm)</span><span class="price">₹499</span></div>
+<div class="item"><span>KitKat Cake (500gm)</span><span class="price">₹499</span></div>
+<div class="item"><span>Chocolate Almond Cake (500gm)</span><span class="price">₹500</span></div>
+<div class="item"><span>German Chocolate Cake (500gm)</span><span class="price">₹599</span></div>
 
 </div>
 
-<div class="pastry">
-<h2>🍰 Pastry Menu</h2>
-
-<p>Small Pastry ₹99 (Pineapple, Strawberry, Black Forest)</p>
-
-<p>Small Pastry ₹129 (Chocolate, Marble Chocolate)</p>
-
-<p>Big Pastry ₹149 (Pineapple, Strawberry, Black Forest)</p>
-
-</div>
+<a class="whatsapp-btn" href="https://wa.me/917779009369?text=Hello%20I%20want%20to%20order%20cake">
+Order on WhatsApp
+</a>
 
 </body>
 </html>
