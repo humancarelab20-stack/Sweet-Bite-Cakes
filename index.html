@@ -7,32 +7,54 @@
 
 body{
 font-family:Arial;
-background:#fff5f7;
 margin:0;
-text-align:center;
+background:#fff5f7;
 }
 
 header{
 background:#ff4d6d;
 color:white;
-padding:20px;
-font-size:28px;
+padding:25px;
+text-align:center;
+font-size:30px;
 font-weight:bold;
 }
 
+.hero{
+text-align:center;
+padding:40px;
+background:#ffe0e6;
+}
+
+.hero h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+color:#555;
+}
+
+.section-title{
+text-align:center;
+font-size:26px;
+margin:30px 0;
+}
+
 .menu{
-max-width:600px;
-margin:30px auto;
+max-width:700px;
+margin:auto;
 background:white;
+padding:20px;
 border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.2);
-padding:20px;
 }
 
 .item{
 display:flex;
 justify-content:space-between;
-padding:10px;
+padding:12px;
 border-bottom:1px solid #eee;
 font-size:18px;
 }
@@ -42,20 +64,40 @@ color:#28a745;
 font-weight:bold;
 }
 
+.pastry{
+max-width:700px;
+margin:30px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.about{
+text-align:center;
+padding:40px;
+background:#ffe0e6;
+}
+
+.about p{
+max-width:600px;
+margin:auto;
+font-size:18px;
+}
+
 .whatsapp-btn{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:15px 22px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -63,6 +105,13 @@ font-weight:bold;
 <header>
 🍰 Sweet Bite Cakes
 </header>
+
+<div class="hero">
+<h2>Fresh & Delicious Cakes</h2>
+<p>Order your favourite cakes for Birthday, Anniversary & Special Occasions</p>
+</div>
+
+<h2 class="section-title">Cake Menu</h2>
 
 <div class="menu">
 
@@ -81,6 +130,29 @@ font-weight:bold;
 <div class="item"><span>KitKat Cake (500gm)</span><span class="price">₹499</span></div>
 <div class="item"><span>Chocolate Almond Cake (500gm)</span><span class="price">₹500</span></div>
 <div class="item"><span>German Chocolate Cake (500gm)</span><span class="price">₹599</span></div>
+
+</div>
+
+<h2 class="section-title">Pastry Menu</h2>
+
+<div class="pastry">
+
+<p>Small Pastry ₹99 (Pineapple, Strawberry, Black Forest)</p>
+
+<p>Small Pastry ₹129 (Chocolate, Marble Chocolate)</p>
+
+<p>Big Pastry ₹149 (Pineapple, Strawberry, Black Forest)</p>
+
+</div>
+
+<div class="about">
+
+<h2>About Sweet Bite Cakes</h2>
+
+<p>
+We make fresh and delicious cakes for birthdays, anniversaries and special celebrations.
+Order your favourite cake easily through WhatsApp.
+</p>
 
 </div>
 
