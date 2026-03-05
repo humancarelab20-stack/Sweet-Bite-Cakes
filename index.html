@@ -1,84 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Sweet Bite Cakes</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
 font-family:Arial;
 margin:0;
-background:#fff4f6;
+background:#fafafa;
 }
 
 header{
 background:#ff4d6d;
 color:white;
-padding:25px;
+padding:15px;
 text-align:center;
-font-size:32px;
+font-size:22px;
 font-weight:bold;
 }
 
 .hero{
-text-align:center;
-padding:40px;
-background:#ffe0e6;
-}
-
-.hero h2{
-margin:0;
-font-size:28px;
+background:url("https://images.unsplash.com/photo-1578985545062-69928b1d9587");
+background-size:cover;
+background-position:center;
+height:250px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:30px;
+font-weight:bold;
+text-shadow:2px 2px 5px black;
 }
 
 .search{
+padding:15px;
 text-align:center;
-margin:20px;
 }
 
 .search input{
-padding:10px;
 width:80%;
-max-width:400px;
-border-radius:20px;
-border:1px solid #ccc;
+padding:10px;
+border-radius:25px;
+border:1px solid #ddd;
 }
 
-.cakes{
+.cake-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
 padding:20px;
-max-width:1000px;
-margin:auto;
 }
 
-.card{
+.cake{
 background:white;
-padding:20px;
 border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
+padding:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 text-align:center;
+transition:0.3s;
 }
 
-.card h3{
-margin:10px 0;
+.cake:hover{
+transform:scale(1.05);
 }
 
 .price{
-color:#28a745;
+color:#ff4d6d;
 font-weight:bold;
-font-size:18px;
 }
 
 .order{
-margin-top:10px;
-display:inline-block;
-background:#25D366;
+background:#ff4d6d;
 color:white;
-padding:10px 15px;
+border:none;
+padding:8px 15px;
 border-radius:20px;
-text-decoration:none;
+margin-top:5px;
+cursor:pointer;
+}
+
+.about{
+background:white;
+padding:25px;
+text-align:center;
+}
+
+.contact{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
 }
 
 .whatsapp{
@@ -87,196 +103,116 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
-border-radius:30px;
+padding:15px;
+border-radius:50%;
+font-size:22px;
 text-decoration:none;
-font-weight:bold;
 }
 
 </style>
-
-<script>
-
-function searchCake(){
-let input=document.getElementById("search").value.toLowerCase();
-let cards=document.getElementsByClassName("card");
-
-for(let i=0;i<cards.length;i++){
-
-let title=cards[i].innerText.toLowerCase();
-
-if(title.includes(input)){
-cards[i].style.display="block";
-}else{
-cards[i].style.display="none";
-}
-
-}
-
-}
-
-</script>
 
 </head>
 
 <body>
 
 <header>
-🍰 Sweet Bite Cakes
+🎂 Sweet Bite Cakes
 </header>
 
 <div class="hero">
-<h2>Fresh Cakes for Every Celebration</h2>
-<p>Birthday | Anniversary | Special Occasions</p>
+Fresh Cakes Everyday
 </div>
 
 <div class="search">
-<input type="text" id="search" onkeyup="searchCake()" placeholder="Search Cake...">
+<input type="text" id="search" placeholder="Search cake...">
 </div>
 
-<div class="cakes">
+<div class="cake-grid">
 
-<div class="card">
-<h3>Vanilla Cake</h3>
-<div class="price">₹360</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Vanilla Cake">Order</a>
-</div>
+<div class="cake"><h3>Vanilla Cake</h3><p class="price">₹360</p><button class="order" onclick="order('Vanilla Cake')">Order</button></div>
 
-<div class="card">
-<h3>Black Forest Cake</h3>
-<div class="price">₹360</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Black Forest Cake">Order</a>
-</div>
+<div class="cake"><h3>Black Forest Cake</h3><p class="price">₹360</p><button class="order" onclick="order('Black Forest Cake')">Order</button></div>
 
-<div class="card">
-<h3>Pineapple Cake</h3>
-<div class="price">₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Pineapple Cake">Order</a>
-</div>
+<div class="cake"><h3>Pineapple Cake</h3><p class="price">₹399</p><button class="order" onclick="order('Pineapple Cake')">Order</button></div>
 
-<div class="card">
-<h3>Strawberry Cake</h3>
-<div class="price">₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Strawberry Cake">Order</a>
-</div>
+<div class="cake"><h3>Strawberry Cake</h3><p class="price">₹399</p><button class="order" onclick="order('Strawberry Cake')">Order</button></div>
 
-<div class="card">
-<h3>Butterscotch Cake</h3>
-<div class="price">₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Butterscotch Cake">Order</a>
-</div>
+<div class="cake"><h3>Butter Scotch Cake</h3><p class="price">₹399</p><button class="order" onclick="order('Butter Scotch Cake')">Order</button></div>
 
-<div class="card">
-<h3>Chocolate Truffle Cake</h3>
-<div class="price">₹499</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Chocolate Truffle Cake">Order</a>
+<div class="cake"><h3>White Forest Cake</h3><p class="price">₹399</p><button class="order" onclick="order('White Forest Cake')">Order</button></div>
+
+<div class="cake"><h3>Choco Chips Cake</h3><p class="price">₹450</p><button class="order" onclick="order('Choco Chips Cake')">Order</button></div>
+
+<div class="cake"><h3>Blue Berry Cake</h3><p class="price">₹450</p><button class="order" onclick="order('Blue Berry Cake')">Order</button></div>
+
+<div class="cake"><h3>Italian Chocolate Cake</h3><p class="price">₹450</p><button class="order" onclick="order('Italian Chocolate Cake')">Order</button></div>
+
+<div class="cake"><h3>Marble Chocolate Cake</h3><p class="price">₹450</p><button class="order" onclick="order('Marble Chocolate Cake')">Order</button></div>
+
+<div class="cake"><h3>Chocolate Truffle Cake</h3><p class="price">₹499</p><button class="order" onclick="order('Chocolate Truffle Cake')">Order</button></div>
+
+<div class="cake"><h3>Oreo Cake</h3><p class="price">₹499</p><button class="order" onclick="order('Oreo Cake')">Order</button></div>
+
+<div class="cake"><h3>Kitkat Cake</h3><p class="price">₹499</p><button class="order" onclick="order('Kitkat Cake')">Order</button></div>
+
+<div class="cake"><h3>Chocolate Almond Cake</h3><p class="price">₹500</p><button class="order" onclick="order('Chocolate Almond Cake')">Order</button></div>
+
+<div class="cake"><h3>German Chocolate Cake</h3><p class="price">₹599</p><button class="order" onclick="order('German Chocolate Cake')">Order</button></div>
+
 </div>
 
-<div class="card">
-<h3>Oreo Cake</h3>
-<div class="price">₹499</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Oreo Cake">Order</a>
+<div class="about">
+
+<h2>About Sweet Bite Cakes</h2>
+
+<p>
+Fresh handmade cakes for birthdays, anniversaries and special occasions.
+We use premium ingredients to make every celebration sweet and memorable.
+</p>
+
 </div>
 
-<div class="card">
-<h3>KitKat Cake</h3>
-<div class="price">₹499</div>
-<a class="order" href="https://wa.me/917779009369?text=I want KitKat Cake">Order</a>
+<div class="contact">
+
+<h3>Contact Us</h3>
+
+<p>Order directly on WhatsApp</p>
+
+<p>📞 7779009369</p>
+
 </div>
 
-<div class="card">
-<h3>Blue Berry Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Blue Berry Cake">Order</a>
-</div>
+<a class="whatsapp" href="https://wa.me/917779009369">💬</a>
 
-<div class="card">
-<h3>Red Velvet Cake</h3>
-<div class="price">₹499</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Red Velvet Cake">Order</a>
-</div>
-<div class="card">
-<h3>Chocolate Vanilla Cake</h3>
-<div class="price">₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Chocolate Vanilla Cake">Order</a>
-</div>
+<script>
 
-<div class="card">
-<h3>Italian Chocolate Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Italian Chocolate Cake">Order</a>
-</div>
+function order(cake){
 
-<div class="card">
-<h3>White Forest Cake</h3>
-<div class="price">₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I want White Forest Cake">Order</a>
-</div>
+window.open("https://wa.me/917779009369?text=Hello, I want to order "+cake)
 
-<div class="card">
-<h3>Swiss Truffle Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Swiss Truffle Cake">Order</a>
-</div>
+}
 
-<div class="card">
-<h3>Pineapple Jelly Cake</h3>
-<div class="price">₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Pineapple Jelly Cake">Order</a>
-</div>
+document.getElementById("search").addEventListener("keyup",function(){
 
-<div class="card">
-<h3>Cubano Chocolate Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Cubano Chocolate Cake">Order</a>
-</div>
+let value=this.value.toLowerCase()
 
-<div class="card">
-<h3>Strawberry Jelly Cake</h3>
-<div class="price">₹399</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Strawberry Jelly Cake">Order</a>
-</div>
+let cakes=document.querySelectorAll(".cake")
 
-<div class="card">
-<h3>Black & White Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Black & White Cake">Order</a>
-</div>
+cakes.forEach(function(c){
 
-<div class="card">
-<h3>Mix Crush Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Mix Crush Cake">Order</a>
-</div>
+let name=c.innerText.toLowerCase()
 
-<div class="card">
-<h3>Very Berry Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Very Berry Cake">Order</a>
-</div>
+if(name.includes(value)){
+c.style.display="block"
+}else{
+c.style.display="none"
+}
 
-<div class="card">
-<h3>Choco Strawberry Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Choco Strawberry Cake">Order</a>
-</div>
+})
 
-<div class="card">
-<h3>Fresh Fruit Cake</h3>
-<div class="price">₹450</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Fresh Fruit Cake">Order</a>
-</div>
+})
 
-<div class="card">
-<h3>Chocolate Walnut Cake</h3>
-<div class="price">₹500</div>
-<a class="order" href="https://wa.me/917779009369?text=I want Chocolate Walnut Cake">Order</a>
-</div>
-</div>
-
-<a class="whatsapp" href="https://wa.me/917779009369">
-WhatsApp Order
-</a>
+</script>
 
 </body>
 </html>
